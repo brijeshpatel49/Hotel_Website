@@ -50,7 +50,7 @@
             <div class="form-container">
                 <h1>Register Here</h1>
 
-                <form class="form_box">
+                <form class="form_box" onsubmit="return validateForm()">
                     <label for="fname"></label>
                     <input type="text" id="fname" name="fname" placeholder="First Name" required> <br><br>
 
@@ -61,21 +61,22 @@
                     <input type="email" id="email" name="email" placeholder="Email" required> <br><br>
 
                     <label for="password"></label>
-                    <input type="password" id="password" name="password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" 
-                    title="Must contain at least 8 characters, one uppercase, one lowercase, one number, and one special character" required> <br><br>
+                    <input type="password" id="password" name="password" placeholder="Password"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                        title="Must contain at least 8 characters, one uppercase, one lowercase, one number, and one special character"
+                        required> <br><br>
 
                     <label for="confirm_password"></label>
-                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password"
-                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" 
-                    title="Must contain at least 8 characters, one uppercase, one lowercase, one number, and one special character"
-                    required> <br><br>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required> <br><br>
 
                     <div class="terms-box">
-                        <input type="checkbox" id="terms" required>
+                        <input type="checkbox" id="terms" required >
                         <label for="terms">I agree to the Terms and Conditions</label>
                     </div>
 
-                    <button type="submit">Register</button>
+                    <div id="msg" style="color: red; font-size: 14px;text-align: center;"></div>
+                    
+                    <button type="submit" >Register</button>
 
                     <p>Already have an account?
                         <a href="login.html" class="link">Login</a>
@@ -91,6 +92,20 @@
 
     <script>
 
+        const validateForm = () => {
+    
+            const pass = document.getElementById("password").value;
+            const cPass = document.getElementById("confirm_password").value;
+            const msg = document.getElementById("msg");
+            if (pass!=cPass) {
+                msg.innerText = "Passwords do not match";
+                return false;
+            }
+            else {
+                msg.innerText = "";
+                return true;
+            }
+        }
         function openSidebar() {
             document.getElementById("sidebar").classList.add("active");
             document.getElementById("overlay").classList.add("active");
