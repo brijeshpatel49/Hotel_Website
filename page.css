@@ -58,7 +58,7 @@
 
 body{
     background-image: linear-gradient(rgba(0, 0, 0, 0.2),
-            rgba(0, 0, 0, 0.5)), url('/img/main.avif'
+            rgba(0, 0, 0, 0.5)), url('./img/main.avif'
         );
     background-repeat: no-repeat;
     background-size: cover;
@@ -184,7 +184,7 @@ main {
 
     body{
         background-image: linear-gradient(rgba(0, 0, 0, 0.2),
-                rgba(0, 0, 0, 0.5)), url('/img/main_mobile.jpg'
+                rgba(0, 0, 0, 0.5)), url('./img/main_mobile.jpg'
             );
         background-repeat: no-repeat;
         background-size: cover;
