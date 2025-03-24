@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="page.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="./img/logo.png" alt=""></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#highlights">Highlights</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="Register.html">Register</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-toggle" onclick="openSidebar()">☰</div>
+        </div>
+    </header>
+    
+    <nav id="sidebar">
+        <ul>
+            <li><a href="index.html" onclick="closeSidebar()">Home</a></li>
+            <li><a href="index.html#about" onclick="closeSidebar()">About</a></li>
+            <li><a href="index.html#highlights" onclick="closeSidebar()">Highlights</a></li>
+            <li><a href="index.html#services" onclick="closeSidebar()">Services</a></li>
+            <li><a href="index.html#contact" onclick="closeSidebar()">Contact</a></li>
+            <li><a href="Register.html" onclick="closeSidebar()">Register</a></li>
+        </ul>
+    </nav>
+
+    <div id="overlay" onclick="closeSidebar()"></div> 
+
+    <main>
+        <div class="form-container">
+            <h1>Login</h1>
+
+            <form class="form_box">
+
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Email" required> <br><br>
+
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Password" 
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" 
+        title="Must contain at least 8 characters, one uppercase, one lowercase, one number, and one special character" required> <br><br>
+
+                <div class="terms-box">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the Terms and Conditions</label>
+                </div>
+
+                <button type="submit">Login</button>
+
+                <p>Don't have an account?
+                    <a href="Register.html" class="link">Register</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        
+    function openSidebar() {
+        document.getElementById("sidebar").classList.add("active");
+        document.getElementById("overlay").classList.add("active");
+    }
+
+    function closeSidebar() {
+        document.getElementById("sidebar").classList.remove("active");
+        document.getElementById("overlay").classList.remove("active");
+    }
+
+    </script>
+</body>
+
+</html>

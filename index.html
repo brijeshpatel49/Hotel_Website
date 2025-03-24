@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taj Hotel </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#"><img src="./img/logo.png" alt=""></a>
+            </div>
+
+            <nav>
+                <ul>    
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#highlights">Highlights</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="Register.html">Register</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-toggle" onclick="openSidebar()">☰</div>
+        </div>
+    </header>
+
+    <nav id="sidebar">
+        <ul>
+            <li><a href="#home" onclick="closeSidebar()">Home</a></li>
+            <li><a href="#about" onclick="closeSidebar()">About</a></li>
+            <li><a href="#highlights" onclick="closeSidebar()">Highlights</a></li>
+            <li><a href="#services" onclick="closeSidebar()">Services</a></li>
+            <li><a href="#contact" onclick="closeSidebar()">Contact</a></li>
+            <li><a href="Register.html" onclick="closeSidebar()">Register</a></li>
+        </ul>
+    </nav>
+
+    <div id="overlay" onclick="closeSidebar()"></div> 
+
+    <main>
+
+        <section id="home">
+            <div class="welcome">
+                <h1>Welcome to Taj Hotel</h1>
+                <p>Your Comfort is Our Priority</p>
+                <a href="#about"><i class="fa-solid fa-angles-down"></i></a>
+            </div>
+        </section>
+
+
+        <section id="about">
+            <div class="about-container">
+                <h1>About Us</h1>
+                <p>Welcome to Taj Hotel, your ultimate destination for top-quality products and seamless shopping
+                    experiences. We are passionate about bringing you a curated selection of items that blend style,
+                    innovation, and functionality. Our goal is to make online shopping effortless and enjoyable,
+                    ensuring you find exactly what you need with ease. Explore our collection and discover the perfect
+                    products tailored just for you!"</p>
+            </div>
+            <div class="img-container">
+                <img src="./img/front.avif" alt="">
+            </div>
+
+        </section>
+
+        <section id="highlights">
+            <div class="highlight-container">
+                <h1>HIGHLIGHTS</h1>
+                <p>Step into India's inaugural luxury haven, a 5-star hotel in Mumbai's Colaba. Indulge in a symphony of
+                    culinary delights at our nine legendary bars and restaurants, and revel in the stellar service of
+                    our devoted butlers and concierge. This is where opulence meets tradition, promising an
+                    unforgettable experience.</p>
+            </div>
+
+            <div class="highlight-img">
+                <div>
+                    <img src="./img/architecture.avif" alt="Taj Hotel Architecture">
+                    <p>ICONIC ARCHITECTURE</p>
+                </div>
+                <div>
+                    <img src="./img/Dinning.avif" alt="Taj Hotel Art Design">
+                    <p>HISTORIC BALLROOM</p>
+                </div>
+                <div>
+                    <img src="./img/green.avif" alt="Greenry Taj Hotel">
+                    <p>SUSTNED BY GREEN ENERGY</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="services">
+
+            <h1>SERVICES</h1>
+
+            <div class="services-container">
+                <div>
+                    <h2>HOTEL</h2>
+                    <ul>
+                        <li><span></span>Taj Club lounge</li>
+                        <li><span></span>Evening entertainment</li>
+                        <li><span></span>Indoor banquet spaces</li>
+                        <li><span></span>Standard & premium Wi-Fi</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>DINING</h2>
+                    <ul>
+                        <li><span></span>Golden Dragon (Sichuan & Cantonese)</li>
+                        <li><span></span>Shamiana (24-hour international dining)</li>
+                        <li><span></span>Sea Lounge (Seaside restaurant and Tea salon)</li>
+                        <li><span></span>La Patisserie (Pastries and deli specialities)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>WELLNESS</h2>
+                    <ul>
+                        <li><span></span>Outdoor Pool</li>
+                        <li><span></span>Taj Salon</li>
+                        <li><span></span>J Wellness Circle Spa</li>
+                        <li><span></span>24-hour fitness centre</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>ROOMS</h2>
+                    <ul>
+                        <li><span></span>Interconnecting rooms (subject to availability)</li>
+                        <li><span></span>Sea-facing rooms/ City View Rooms</li>
+                        <li><span></span>24/7 in-room dining</li>
+                        <li><span></span>High Speed Wi-Fi</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <div class="details-box">
+                <section class="grid-container">
+                    <aside>
+                    <div>
+                        <h4>LOCATION</h4>
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>Apollo Bunder, Mumbai, Maharashtra, 400 001, India</p>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-map"></i>
+                            <p><a href="https://www.google.com/travel/search?ts=CAESCAoCCAMKAggDGhwSGhIUCgcI6Q8QAxgYEgcI6Q8QAxgZGAEyAhAAKgwKCjoDSU5SQgMIywE&qs=CAEyFENnc0kxXzdjcHRxUXdaVEFBUkFCOAtCCRF_YLXfGk5RU0IJEZ1H-D7XFyO9QgkRxaQ1HoNhUiJaSDJGqgFDCgkvbS8wY2RtazMQATIeEAEiGkSYJy5aW9MDC8LpSS0n5vc1MU1JEV-3MdCFMhQQAiIQdGFqIGhvdGVsIG11bWJhaQ&utm_campaign=sharing&utm_medium=link_btn&utm_source=htls">Click Here for directions</a></p>
+                        </span>
+                    </div>
+                    <div>
+                        <h4>Contact</h4>
+                        <span>
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>reservations.mumbai@ihcltata.com</p>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-phone"></i>
+                            <p>+91 12345 67890</p>
+                        </span>
+                    </div>
+                </aside>
+                    <aside class="entry-img">
+                        <img src="./img/entry-hd.jpg" alt="">
+                    </aside>
+                </section>
+            </div>
+        </section>
+    </main>
+    <script>
+        window.addEventListener("scroll", function () {
+            let navbar = document.querySelector(".navbar");
+            if (window.scrollY > 735.2) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+
+
+
+    function openSidebar() {
+        document.getElementById("sidebar").classList.add("active");
+        document.getElementById("overlay").classList.add("active");
+    }
+
+    function closeSidebar() {
+        document.getElementById("sidebar").classList.remove("active");
+        document.getElementById("overlay").classList.remove("active");
+    }
+
+    </script>
+
+</body>
+
+</html>
